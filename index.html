@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+        <script src = "myApp.js"></script>
+    </head>
+    <body>
+        <div ng-controller="appController as appCtrl">
+            <input type="tel" class="form-control" id="PhoneNumber" name="PhoneNumber" ng-model="appCtrl.PhoneNumber" placeholder="Phone" maxlength="12" ng-value="appCtrl.PhoneNumber" required phone-number-validator server-validation>
+            <p class="help-block" ng-if="appCtrl.PhoneNumber.$error.invalidFormat">Phone Number is invalid</p>
+        </div>
+    </body>
+</html>
